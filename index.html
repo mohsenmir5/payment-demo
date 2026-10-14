@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment Demo</title>
+<style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #eef2f7;
+  font-family: Arial, sans-serif;
+  color: #202938;
+}
+.card {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #0001;
+}
+.notice {
+  background: #fff0d5;
+  color: #7b4500;
+  padding: 14px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+}
+h1 { font-size: 23px; }
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+.value { text-align: right; }
+.footer {
+  margin-top: 22px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #596579;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="notice">
+    DEMO — NOT A BANK RECEIPT<br>
+    نمونه آزمایشی؛ فاقد تأیید بانکی
+  </div>
+
+  <h1>Payment Information — Demo</h1>
+
+  <div class="row">
+    <span>Claimed amount</span>
+    <strong class="value">USD 6,000</strong>
+  </div>
+  <div class="row">
+    <span>Transaction status</span>
+    <strong class="value">UNVERIFIED</strong>
+  </div>
+  <div class="row">
+    <span>Bank verification</span>
+    <strong class="value">NOT PROVIDED</strong>
+  </div>
+  <div class="row">
+    <span>Data source</span>
+    <span class="value">Manually entered</span>
+  </div>
+
+  <div class="footer">
+    This page is a demonstration of a static website.
+    It is not connected to any bank or payment network.
+    Displayed information does not prove that money
+    has been transferred or received.
+
+    <hr>
+    این صفحه صرفاً نمایشی است و به هیچ بانک یا
+    شبکه پرداختی متصل نیست. اطلاعات نمایش‌داده‌شده
+    اثبات‌کننده انتقال یا دریافت وجه نیست.
+  </div>
+</div>
+</body>
+</html>
