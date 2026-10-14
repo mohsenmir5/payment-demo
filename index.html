@@ -1,88 +1,160 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Payment Demo</title>
 <style>
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
-  padding: 24px;
-  background: #eef2f7;
-  font-family: Arial, sans-serif;
-  color: #202938;
+  background: #080a0e;
+  color: #e7eaf0;
+  font-family: Tahoma, Arial, sans-serif;
+  padding: 20px;
 }
-.card {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 25px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px #0001;
+
+.container {
+  max-width: 680px;
+  margin: 25px auto;
+  border: 1px solid #292e38;
+  background: #101319;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.notice {
-  background: #fff0d5;
-  color: #7b4500;
-  padding: 14px;
+
+.header {
+  padding: 22px;
+  background: #090b10;
+  border-bottom: 1px solid #292e38;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #929baa;
+  font-size: 13px;
+}
+
+.warning {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #8b6526;
+  background: #2a2111;
+  color: #ffd27b;
   text-align: center;
   font-weight: bold;
-  border-radius: 8px;
+  line-height: 1.9;
 }
-h1 { font-size: 23px; }
+
+.content { padding: 0 22px 22px; }
+
+h2 {
+  font-size: 17px;
+  margin: 20px 0;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  padding: 13px 0;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 15px 0;
+  border-bottom: 1px solid #252a33;
 }
-.value { text-align: right; }
-.footer {
-  margin-top: 22px;
+
+.label {
+  color: #929baa;
   font-size: 13px;
-  line-height: 1.8;
-  color: #596579;
+}
+
+.value {
+  text-align: left;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.amount {
+  color: #e7eaf0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.status {
+  color: #ffd27b;
+  font-weight: bold;
+}
+
+.footer {
+  border-top: 1px solid #292e38;
+  padding: 20px;
+  color: #929baa;
+  font-size: 12px;
+  line-height: 2;
+}
+
+@media (max-width: 420px) {
+  body { padding: 8px; }
+  .row { gap: 8px; }
+  .value { max-width: 60%; }
 }
 </style>
 </head>
 <body>
-<div class="card">
-  <div class="notice">
+
+<div class="container">
+  <header class="header">
+    <div class="brand">PAYMENT RECORD</div>
+    <div class="subtitle">Static Transaction Display</div>
+  </header>
+
+  <div class="warning">
     DEMO — NOT A BANK RECEIPT<br>
     نمونه آزمایشی؛ فاقد تأیید بانکی
   </div>
 
-  <h1>Payment Information — Demo</h1>
+  <main class="content">
+    <h2>اطلاعات انتقال ادعایی</h2>
 
-  <div class="row">
-    <span>Claimed amount</span>
-    <strong class="value">USD 6,000</strong>
-  </div>
-  <div class="row">
-    <span>Transaction status</span>
-    <strong class="value">UNVERIFIED</strong>
-  </div>
-  <div class="row">
-    <span>Bank verification</span>
-    <strong class="value">NOT PROVIDED</strong>
-  </div>
-  <div class="row">
-    <span>Data source</span>
-    <span class="value">Manually entered</span>
-  </div>
+    <div class="row">
+      <span class="label">مبلغ ادعایی</span>
+      <span class="amount">$100,000</span>
+    </div>
 
-  <div class="footer">
-    This page is a demonstration of a static website.
-    It is not connected to any bank or payment network.
-    Displayed information does not prove that money
-    has been transferred or received.
+    <div class="row">
+      <span class="label">تاریخ ادعایی</span>
+      <span class="value">25 August</span>
+    </div>
 
-    <hr>
-    این صفحه صرفاً نمایشی است و به هیچ بانک یا
-    شبکه پرداختی متصل نیست. اطلاعات نمایش‌داده‌شده
-    اثبات‌کننده انتقال یا دریافت وجه نیست.
-  </div>
+    <div class="row">
+      <span class="label">بانک مبدأ ادعایی</span>
+      <span class="value">بانک ملت</span>
+    </div>
+
+    <div class="row">
+      <span class="label">وضعیت تأیید بانکی</span>
+      <span class="value status">تأیید نشده</span>
+    </div>
+
+    <div class="row">
+      <span class="label">شماره حساب</span>
+      <span class="value">در این نمونه درج نشده</span>
+    </div>
+  </main>
+
+  <footer class="footer">
+    این صفحه یک نمونه نمایشی است و به هیچ بانک یا
+    شبکه پرداختی متصل نیست. اطلاعات آن دستی درج شده
+    و اثبات‌کننده انتقال یا دریافت وجه نیست.
+    برای تأیید تراکنش باید از مرجع بانکی مربوط
+    استعلام مستقل گرفته شود.
+  </footer>
 </div>
+
 </body>
 </html>
